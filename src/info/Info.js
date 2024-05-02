@@ -58,7 +58,7 @@ export const info = {
       label: "leetcode",
     },
     {
-      link: "https://drive.google.com/file/d/14_4de9zYkPkuHHTF1jzmMQm1SmDFfQMf/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1NwIngaRMXAw0eBACWE_duLR9knT4ckNn/view?usp=sharing",
       icon: "fa fa-file-text fa-1x",
       label: "resume",
     },
