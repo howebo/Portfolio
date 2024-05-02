@@ -13,10 +13,10 @@ export let singlePage = false;
 export const info = {
   firstName: "Priyansh",
   lastName: "Singh Chawda",
-  initials: "PSC", 
+  initials: "PSC",
   position: "A Full Stack Developer",
   selfPortrait: self,
-  gradient: `-webkit-linear-gradient(135deg, ${colors})`, 
+  gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: colors[0],
   miniBio: [
     {
@@ -58,7 +58,7 @@ export const info = {
       label: "leetcode",
     },
     {
-      link: "https://drive.google.com/file/d/1NwIngaRMXAw0eBACWE_duLR9knT4ckNn/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1a1CWkWpcCMdf5Ce4IW6Y2_L6lBfQbPeP/view?usp=sharing",
       icon: "fa fa-file-text fa-1x",
       label: "resume",
     },
@@ -97,13 +97,11 @@ export const info = {
       label: "cooking",
       emoji: "🌶",
     },
-    
   ],
   portfolio: [
-    
     {
       title: "Project 1",
-      live: "https://howebo.github.io/Weather-App/", 
+      live: "https://howebo.github.io/Weather-App/",
       source: "https://github.com/howebo/Weather-App",
       image: mock1,
     },
