@@ -5,6 +5,7 @@ import mock3 from "../img/mock3.png";
 import mock4 from "../img/mock4.png";
 import mock5 from "../img/mock5.png";
 import mock6 from "../img/mock6.png";
+import mock7 from "../img/mock7.png";
 
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
@@ -58,7 +59,7 @@ export const info = {
       label: "leetcode",
     },
     {
-      link: "https://drive.google.com/file/d/1a1CWkWpcCMdf5Ce4IW6Y2_L6lBfQbPeP/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1esu4QnNBfqk5qnRwCApN3ZHVGZVoFoFh/view?usp=sharing",
       icon: "fa fa-file-text fa-1x",
       label: "resume",
     },
@@ -101,39 +102,45 @@ export const info = {
   portfolio: [
     {
       title: "Project 1",
+      live: "https://github.com/howebo/Grocery",
+      source: "https://github.com/howebo/Grocery",
+      image: mock7,
+    },
+    {
+      title: "Project 2",
       live: "https://howebo.github.io/Weather-App/",
       source: "https://github.com/howebo/Weather-App",
       image: mock1,
     },
     {
-      title: "Project 2",
+      title: "Project 3",
       live: "https://howebo.github.io/TrainApp/train.html",
       source: "https://github.com/howebo/TrainApp",
       image: mock2,
     },
     {
-      title: "Project 3",
+      title: "Project 4",
       live: "https://github.com/howebo/Skincare",
       source: "https://github.com/howebo/Skincare",
       image: mock3,
     },
     {
-      title: "Project 4",
+      title: "Project 5",
       live: "https://github.com/howebo/Url-Shortener",
       source: "https://github.com/howebo/Url-Shortener",
       image: mock4,
     },
     {
-      title: "Project 5",
+      title: "Project 6",
       live: "https://github.com/howebo/UM",
       source: "https://github.com/howebo/UM",
       image: mock5,
     },
     {
-      title: "Project 6",
+      title: "Project 7",
       live: "https://github.com/howebo/The-Daily-Buzz",
       source: "https://github.com/howebo/The-Daily-Buzz",
       image: mock6,
-    },
+    }
   ],
 };
