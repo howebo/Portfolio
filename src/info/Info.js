@@ -64,7 +64,7 @@ export const info = {
       label: "resume",
     },
   ],
-  bio: "Hello 👋, I'm Priyansh. I'm a Software Engineer 🧑‍💻 at Accenture.I enjoy doing meditation 🧘‍♂️, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
+  bio: "Hello 👋, I'm Priyansh. I'm a Software Engineer 🧑‍💻 at Accenture.I enjoy doing meditation 🧘‍♂️, and I believe AI will inevitably rule us all one day. You should hire me!",
   skills: {
     proficientWith: [
       "Angular",
