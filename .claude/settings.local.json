@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Lenovo/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/.claude/skills/ui-ux-pro-max/**)",
+      "Bash(python3 scripts/search.py \"portfolio developer personal brand dark glassmorphism\" --design-system -p \"Priyansh Portfolio\" -f markdown)",
+      "Bash(py --version)",
+      "Bash(where python *)",
+      "Bash(where py *)",
+      "Bash(python scripts/search.py \"portfolio developer personal brand dark glassmorphism\" --design-system -p \"Priyansh Portfolio\" -f markdown)",
+      "Bash(Get-ChildItem *)",
+      "Bash(dir *)",
+      "Bash(npm start *)",
+      "Bash(npx react-scripts *)",
+      "Bash(npm install *)",
+      "Bash(node_modules/.bin/react-scripts build *)",
+      "Bash(node_modules/.bin/react-scripts start *)",
+      "Bash(start *)",
+      "Bash(node *)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\self\\\\Cosmos\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\self\\\\Nexus\")",
+      "Bash(Write-Output \"Dirs ready\")"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../variables.modules';
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: $radius-pill;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: $transition;
+
+  i { font-size: 0.78rem; }
+}
+
+.primary {
+  background: $gradient;
+  color: #0d0d0d;
+  box-shadow: 0 4px 16px rgba(0, 255, 164, 0.22);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 255, 164, 0.35);
+  }
+}
+
+.ghost {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f0f0f0;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+}

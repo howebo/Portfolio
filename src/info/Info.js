@@ -1,15 +1,12 @@
 import self from "../img/self.png";
-import mock1 from "../img/mock1.png";
-import mock2 from "../img/mock2.png";
-import mock3 from "../img/mock3.png";
-import mock4 from "../img/mock4.png";
-import mock5 from "../img/mock5.png";
-import mock6 from "../img/mock6.png";
-import mock7 from "../img/mock7.png";
+import aura from "../img/aura.png";
+import nexus from "../img/nexus.png";
+import cosmos from "../img/cosmos.png";
+// import train from "../img/train.png";
 
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
-export let singlePage = false;
+export let singlePage = true;
 
 export const info = {
   firstName: "Priyansh",
@@ -30,7 +27,7 @@ export const info = {
     },
     {
       emoji: "💼",
-      text: "Software Engineer at Accenture",
+      text: "Software Engineer at Circana",
     },
     {
       emoji: "📧",
@@ -64,7 +61,7 @@ export const info = {
       label: "resume",
     },
   ],
-  bio: "Hello 👋, I'm Priyansh. I'm a Software Engineer 🧑‍💻 at Accenture.I enjoy doing meditation 🧘‍♂️, and I believe AI will inevitably rule us all one day. You should hire me!",
+  bio: "Hello 👋, I'm Priyansh. I'm a Software Engineer 🧑‍💻 at Circana.I enjoy doing meditation 🧘‍♂️, and I believe AI will inevitably rule us all one day. You should hire me!",
   skills: {
     proficientWith: [
       "Angular",
@@ -79,68 +76,80 @@ export const info = {
       "Sql",
       "C",
     ],
-    exposedTo: ["Nodejs", "Express", "Postman", "Docker", "MongoDB"],
+    exposedTo: ["Nodejs", "Express", "Postman", "Docker", "MongoDB", "DBeaver"],
   },
   hobbies: [
     {
-      label: "meditation",
+      label: "Meditation",
       emoji: "🧘‍♂️",
     },
     {
-      label: "football",
+      label: "Football",
       emoji: "⚽",
     },
     {
-      label: "movies",
+      label: "Movies",
       emoji: "🎥",
     },
     {
-      label: "cooking",
+      label: "Cooking",
       emoji: "🌶",
     },
   ],
   portfolio: [
     {
-      title: "Project 1",
-      live: "https://github.com/howebo/Grocery",
-      source: "https://github.com/howebo/Grocery",
-      image: mock7,
+      title: "Aura Weather",
+      live: "https://howebo.github.io/Aura_Weather/",
+      source: "https://github.com/howebo/Aura_Weather",
+      image: aura,
     },
     {
-      title: "Project 2",
-      live: "https://howebo.github.io/Weather-App/",
-      source: "https://github.com/howebo/Weather-App",
-      image: mock1,
+      title: "Pomodoro Timer and Tools",
+      live: "https://howebo.github.io/nexus/",
+      source: "https://github.com/howebo/nexus",
+      image: nexus,
     },
     {
-      title: "Project 3",
-      live: "https://howebo.github.io/TrainApp/train.html",
-      source: "https://github.com/howebo/TrainApp",
-      image: mock2,
+      title: "Cosmos",
+      live: "https://howebo.github.io/cosmos/",
+      source: "https://github.com/howebo/cosmos",
+      image: cosmos,
     },
-    {
-      title: "Project 4",
-      live: "https://github.com/howebo/Skincare",
-      source: "https://github.com/howebo/Skincare",
-      image: mock3,
-    },
-    {
-      title: "Project 5",
-      live: "https://github.com/howebo/Url-Shortener",
-      source: "https://github.com/howebo/Url-Shortener",
-      image: mock4,
-    },
-    {
-      title: "Project 6",
-      live: "https://github.com/howebo/UM",
-      source: "https://github.com/howebo/UM",
-      image: mock5,
-    },
-    {
-      title: "Project 7",
-      live: "https://github.com/howebo/The-Daily-Buzz",
-      source: "https://github.com/howebo/The-Daily-Buzz",
-      image: mock6,
-    }
+    // {
+    //   title: "Project 1",
+    //   live: "https://github.com/howebo/Grocery",
+    //   source: "https://github.com/howebo/Grocery",
+    //   image: mock7,
+    // },
+    // {
+    //   title: "Train App",
+    //   live: "https://howebo.github.io/TrainApp/train.html",
+    //   source: "https://github.com/howebo/TrainApp",
+    //   image: train,
+    // },
+    // {
+    //   title: "Project 4",
+    //   live: "https://github.com/howebo/Skincare",
+    //   source: "https://github.com/howebo/Skincare",
+    //   image: mock3,
+    // },
+    // {
+    //   title: "Project 5",
+    //   live: "https://github.com/howebo/Url-Shortener",
+    //   source: "https://github.com/howebo/Url-Shortener",
+    //   image: mock4,
+    // },
+    // {
+    //   title: "Project 6",
+    //   live: "https://github.com/howebo/UM",
+    //   source: "https://github.com/howebo/UM",
+    //   image: mock5,
+    // },
+    // {
+    //   title: "Project 7",
+    //   live: "https://github.com/howebo/The-Daily-Buzz",
+    //   source: "https://github.com/howebo/The-Daily-Buzz",
+    //   image: mock6,
+    // }
   ],
 };

@@ -1,0 +1,23 @@
+@import '../../variables.modules';
+
+.bullet {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.28rem 0;
+  font-size: 0.925rem;
+  cursor: default;
+}
+
+.emoji {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 1.4rem;
+  text-align: center;
+}
+
+.text {
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1.5;
+}

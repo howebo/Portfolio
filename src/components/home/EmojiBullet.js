@@ -1,16 +1,11 @@
 import React from 'react';
-import {Box} from "@mui/material";
+import Style from './EmojiBullet.module.scss';
 
-function EmojiBullet(props) {
-    const {emoji, text} = props;
-
-    return (
-        <Box component={'li'} fontSize={'1rem'} lineHeight={1.5} style={{cursor: 'default'}}>
-            <Box component={'span'} aria-label="cheese"
-                 role="img"
-                 mr={{xs: '0.5rem', md: '1rem'}} fontSize={'1.5rem'}>{emoji}</Box> {text}
-        </Box>
-    );
+export default function EmojiBullet({ emoji, text }) {
+  return (
+    <li className={Style.bullet}>
+      <span className={Style.emoji} role="img" aria-hidden="true">{emoji}</span>
+      <span className={Style.text}>{text}</span>
+    </li>
+  );
 }
-
-export default EmojiBullet;

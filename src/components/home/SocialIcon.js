@@ -1,13 +1,17 @@
 import React from 'react';
+import Style from './SocialIcon.module.scss';
 
-function SocialIcon(props) {
-    const {link, icon, label} = props;
-    return (
-        <a target="_blank" aria-label={label}
-           rel="noopener noreferrer" href={link}>
-            <i className={icon} aria-hidden="true"/>
-        </a>
-    );
+export default function SocialIcon({ link, icon, label }) {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      title={label}
+      className={Style.icon}
+    >
+      <i className={icon} aria-hidden="true" />
+    </a>
+  );
 }
-
-export default SocialIcon;

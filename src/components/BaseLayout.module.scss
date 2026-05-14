@@ -1,75 +1,76 @@
-@import "../variables.modules";
+@import '../variables.modules';
 
-footer {
-  color: $dark;
-}
+.root {
+  min-height: 100vh;
+  font-family: $font-body;
+  transition: background-color 350ms ease, color 350ms ease;
 
-.dark {
-  background-color: $dark;
-  color: $white;
-  transition: all 400ms;
+  &.dark {
+    --bg: #0d0d0d;
+    --nav-bg: rgba(13, 13, 13, 0.88);
+    --card-bg: rgba(255, 255, 255, 0.04);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover: rgba(255, 255, 255, 0.07);
+    --text: #f0f0f0;
+    --text-muted: rgba(240, 240, 240, 0.55);
+    --text-subtle: rgba(240, 240, 240, 0.3);
+    --divider: rgba(255, 255, 255, 0.06);
+    --skill-bg: rgba(166, 104, 255, 0.09);
+    --skill-border: rgba(166, 104, 255, 0.22);
 
-  a, i, li {
-    color: $white;
-    transition: color 400ms;
+    background-color: var(--bg);
+    color: var(--text);
   }
 
-  a:visited {
-    color: $white;
-  }
+  &.light {
+    --bg: #f0f0f6;
+    --nav-bg: rgba(240, 240, 246, 0.9);
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-border: rgba(0, 0, 0, 0.08);
+    --card-hover: rgba(255, 255, 255, 0.95);
+    --text: #0f172a;
+    --text-muted: rgba(15, 23, 42, 0.6);
+    --text-subtle: rgba(15, 23, 42, 0.4);
+    --divider: rgba(0, 0, 0, 0.07);
+    --skill-bg: rgba(166, 104, 255, 0.07);
+    --skill-border: rgba(166, 104, 255, 0.2);
 
-  footer {
-    color: $white;
+    background-color: var(--bg);
+    color: var(--text);
   }
 }
 
-.light {
-  background-color: $white;
-  color: $dark;
-  transition: all 400ms;
+.main {
+  padding-top: $nav-height;
 }
 
+.footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid var(--divider);
+  color: var(--text-muted);
+  font-size: 0.875rem;
 
-//.dark {
-//  background-color: $dark;
-//  color: $white;
-//  transition: all 400ms;
-//  a, i {
-//    color: $white;
-//    transition: color 400ms;
-//  }
-//  a:visited {
-//    color: $white;
-//  }
-//  i:hover {
-//    color: $purple;
-//  }
-//  footer {
-//    color: $white;
-//  }
-//
-//  nav {
-//    background-color: $dark;
-//    transition: $transition;
-//  }
-//
-//  div > section > div:first-child {
-//    background-color: #575e64;
-//    i:first-child {
-//      color: $red;
-//    }
-//    i:nth-child(2) {
-//      color: $yellow;
-//    }
-//    i:nth-child(3) {
-//      color: $green;
-//    }
-//  }
-//
-//
-//  & > div div {
-//    i {
-//      color: white;
-//    }
-//  }
-//}
+  p {
+    margin: 0.2rem 0;
+  }
+}
+
+.heart {
+  color: $purple;
+  margin: 0 0.15rem;
+}
+
+.footerLink {
+  color: $green;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footerYear {
+  color: var(--text-subtle);
+  font-size: 0.8rem;
+}

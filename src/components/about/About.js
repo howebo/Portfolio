@@ -1,60 +1,93 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Style from './About.module.scss';
-import Terminal from "./Terminal";
-import {Box} from "@mui/material";
-import {info} from "../../info/Info";
+import { info } from '../../info/Info';
 
+function useReveal(threshold = 0.12) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
+      },
+      { threshold }
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return [ref, visible];
+}
 
-export default function About({innerRef}) {
-    const firstName = info.firstName.toLowerCase()
+export default function About({ innerRef }) {
+  const [headerRef, headerVisible] = useReveal();
+  const [bioRef, bioVisible] = useReveal();
+  const [skillsRef, skillsVisible] = useReveal();
+  const [hobbiesRef, hobbiesVisible] = useReveal();
 
-    function aboutMeText() {
-        return <>
-            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cat
-                about{firstName} </p>
-            <p><span style={{color: info.baseColor}}>about{firstName} <span
-                className={Style.green}>(main)</span> $ </span>
-                {info.bio}
-            </p>
-        </>;
-    }
+  return (
+    <section ref={innerRef} id="about" className={Style.section}>
+      <div className={Style.container}>
+        <div
+          ref={headerRef}
+          className={`${Style.sectionHeader} ${headerVisible ? Style.visible : ''}`}
+        >
+          <span className={Style.sectionTag}>01 — About</span>
+          <h2 className={Style.sectionTitle}>Who am I?</h2>
+        </div>
 
-    function skillsText() {
-        return <>
-            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd skills/tools
-            </p>
-            <p><span style={{color: info.baseColor}}>skills/tools <span
-                className={Style.green}>(main)</span> $</span> ls</p>
-            <p style={{color: info.baseColor}}> Proficient With</p>
-            <ul className={Style.skills}>
-                {info.skills.proficientWith.map((proficiency, index) => <li key={index}>{proficiency}</li>)}
-            </ul>
-            <p style={{color: info.baseColor}}> Exposed To</p>
-            <ul className={Style.skills}>
-                {info.skills.exposedTo.map((skill, index) => <li key={index}>{skill}</li>)}
-            </ul>
-        </>;
-    }
+        {/* Bio */}
+        <div
+          ref={bioRef}
+          className={`${Style.bioCard} ${bioVisible ? Style.visible : ''}`}
+        >
+          <div className={Style.bioAvatar}>PSC</div>
+          <p className={Style.bioText}>{info.bio}</p>
+        </div>
 
-    function miscText() {
-        return <>
-            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd
-                hobbies/interests</p>
-            <p><span style={{color: info.baseColor}}>hobbies/interests <span
-                className={Style.green}>(main)</span> $</span> ls</p>
-            <ul>
-                {info.hobbies.map((hobby, index) => (
-                    <li key={index}><Box component={'span'} mr={'1rem'}>{hobby.emoji}</Box>{hobby.label}</li>
+        {/* Skills */}
+        <div
+          ref={skillsRef}
+          className={`${Style.block} ${skillsVisible ? Style.visible : ''}`}
+          style={{ transitionDelay: '0.1s' }}
+        >
+          <h3 className={Style.blockTitle}>Skills &amp; Tools</h3>
+          <div className={Style.skillsGrid}>
+            <div className={Style.skillGroup}>
+              <p className={Style.groupLabel}>Proficient With</p>
+              <div className={Style.tags}>
+                {info.skills.proficientWith.map((s, i) => (
+                  <span key={i} className={Style.tag}>{s}</span>
                 ))}
-            </ul>
-        </>;
-    }
+              </div>
+            </div>
+            <div className={Style.skillGroup}>
+              <p className={Style.groupLabel}>Exposed To</p>
+              <div className={Style.tags}>
+                {info.skills.exposedTo.map((s, i) => (
+                  <span key={i} className={`${Style.tag} ${Style.tagGreen}`}>{s}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
-    return (
-        <Box ref={innerRef} display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'} id={'about'}>
-            <Terminal text={aboutMeText()}/>
-            <Terminal text={skillsText()}/>
-            <Terminal text={miscText()}/>
-        </Box>
-    )
+        {/* Hobbies */}
+        <div
+          ref={hobbiesRef}
+          className={`${Style.block} ${hobbiesVisible ? Style.visible : ''}`}
+          style={{ transitionDelay: '0.2s' }}
+        >
+          <h3 className={Style.blockTitle}>Beyond the Code</h3>
+          <div className={Style.hobbies}>
+            {info.hobbies.map((h, i) => (
+              <div key={i} className={Style.hobby}>
+                <span className={Style.hobbyEmoji} role="img" aria-label={h.label}>{h.emoji}</span>
+                <span className={Style.hobbyLabel}>{h.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
