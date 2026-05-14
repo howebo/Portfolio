@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseLayout from './components/BaseLayout';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
